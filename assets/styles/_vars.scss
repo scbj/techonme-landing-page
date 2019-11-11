@@ -1,0 +1,31 @@
+// ______________________________________________
+// Colors
+
+$color-1: #0060FF;
+$color-2: #2584FF;
+$color-3: #6EB1FD;
+$color-4: #B2DBFB;
+
+$text-color-1: black;
+$text-color-2: #505050;
+
+
+// ______________________________________________
+// Whitespaces
+
+$content-width: 1440px;
+$content-max-padding: 200px;
+$content-min-padding: 19px;
+
+$header-max-padding-top: 70px;
+$header-min-padding-top: 36px;
+
+// ______________________________________________
+// Responsive Breakpoints
+
+$breakpoints: (
+  small : 480px,
+  medium: 800px,
+  large : 1024px,
+  extraLarge : 1440px
+);

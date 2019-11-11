@@ -1,0 +1,48 @@
+footer {
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  background-image: url(/assets/images/shapes/footer.svg);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;  
+  
+  margin-top: 78px;
+  padding-right: $content-min-padding;
+  padding-left:  $content-min-padding;
+  padding-bottom: 44px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 141px;
+  position: relative;
+
+  @include mq (medium) {
+    font-size: 18px;
+    padding-right: $content-max-padding;
+    padding-left:  $content-max-padding;
+  }
+}
+
+footer > .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  
+  width: 100%;
+  max-width: $content-width;
+
+  a {
+    margin-bottom: 20px;
+  }
+
+  @include mq(medium) {
+    flex-direction: row;
+
+    a {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,88 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+* {
+  transition: all .13s ease-out;
+}
+
+a {
+  cursor: pointer;
+  outline: none;
+  margin: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: currentColor;
+}
+
+// Because buttons and fields are only used as part of the form "contact-me", their respective styles are very specific :
+button {
+  -webkit-tap-highlight-color: transparent;
+  color: white;
+  background: linear-gradient(148.9deg, #8CC6FF 0%, #0060FF);
+  border: none;
+  outline: none;
+  padding-left: 190px;
+  padding-right: 13.6px;
+  cursor: pointer;
+  
+  @include mq(small) {
+    padding-left: 214.09px;
+    padding-right: 17.78px;
+  }
+  
+  @include mq(medium) {
+    padding-left: 262.27px;
+    padding-right: 26.15px;
+  }
+  
+  @include mq(large) {
+    padding-left: 296px;
+    padding-right: 32px;
+  }
+}
+
+input {
+  -webkit-appearance: none;
+  
+  border: 1px solid transparent;
+  padding: 0 34.9px;
+  height: 49px;
+  transition: border-color .2s ease-out;
+  
+  @include mq(small) {
+    padding: 0 36.92px;
+    height: 53.78px;
+  }
+  
+  @include mq(medium) {
+    padding: 0 46.97px;
+    height: 63.32px;
+  }
+  
+  @include mq(large) {
+    padding: 0 54px;
+    height: 70px;
+  }
+
+  &:focus {
+    border-color: #0060FF;
+    outline: none;
+  }
+
+  &::placeholder,
+  &:-ms-input-placeholder,
+  &::-ms-input-placeholder  {
+    color: #BABABA;
+  }
+
+  // Delete the cross that clears the field
+  &::-ms-clear { display: none; }
+}

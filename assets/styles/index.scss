@@ -1,0 +1,103 @@
+@import 'vars';
+@import 'mixins';
+@import 'fonts';
+@import 'base';
+
+@import 'header';
+@import 'main';
+@import 'footer';
+
+@import 'components';
+
+body.debug {
+  *,
+  *::before,
+  *::after {
+    outline: 3px solid rgba(255, 0, 255, 0.1);
+    -moz-outline-radius: 8px;
+  }
+}
+
+body {
+  color: $text-color-1;
+  user-select: none;
+
+  p,
+  em,
+  h1,
+  h2,
+  h3 {
+    user-select: text;
+
+    &::selection {
+      color: inherit;
+      background: #edf1f8;
+    }
+  }
+}
+
+body {
+  background-image:
+    url(/assets/images/illustrations/header-mobile.svg),
+    url(/assets/images/illustrations/find-for-you-mobile.svg),
+    url(/assets/images/illustrations/fast-proposals-mobile.svg),
+    url(/assets/images/illustrations/matching-algorithm-mobile.svg);
+  background-position:
+    top 424px right -561px,
+    top 1501px right -260px,
+    top 2009px left -706px,
+    top 3254px right -169px;
+  background-repeat: no-repeat;
+
+  @include mq(small) {
+    background-image:
+      url(/assets/images/illustrations/header-mobile.svg),
+      url(/assets/images/illustrations/find-for-you-mobile.svg),
+      url(/assets/images/illustrations/fast-proposals-mobile.svg),
+      url(/assets/images/illustrations/matching-algorithm.svg);
+    background-position:
+      top 424px right -561px,
+      top 1461px right -224px,
+      top 1889px left -596px,
+      top 3117px right -169px;
+  }
+
+  @include mq(medium) {
+    background-image:
+      url(/assets/images/illustrations/header-mobile.svg),
+      url(/assets/images/illustrations/find-for-you.svg),
+      url(/assets/images/illustrations/fast-proposals-mobile.svg),
+      url(/assets/images/illustrations/matching-algorithm.svg);
+    background-position:
+      top 245px right -561px,
+      top 1140px right -122px,
+      top 1680px left -599px,
+      top 2863px right -161px;
+  }
+
+  @include mq(large) {
+    background-image:
+    url(/assets/images/illustrations/header-mobile.svg),
+    url(/assets/images/illustrations/find-for-you.svg),
+    url(/assets/images/illustrations/fast-proposals-mobile.svg),
+    url(/assets/images/illustrations/matching-algorithm.svg);
+  background-position:
+    top 245px right -561px,
+    top 1129px right -152px,
+    top 1506px left -526px,
+    top 2552px right -191px;
+  }
+
+  @include mq(extraLarge) {
+    background-image:
+    url(/assets/images/illustrations/header.svg),
+    url(/assets/images/illustrations/find-for-you.svg),
+    url(/assets/images/illustrations/fast-proposals.svg),
+    url(/assets/images/illustrations/matching-algorithm.svg);
+  background-position:
+    top 0 right -185px,
+    top 1155px right -115px,
+    top 1046px left -720px,
+    top 2406px right -191px;
+  }
+}

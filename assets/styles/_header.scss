@@ -1,0 +1,21 @@
+header {
+  padding: $header-min-padding-top $content-min-padding;
+  padding-bottom: calc(#{$header-min-padding-top} + 20px);
+
+  display: flex;
+  justify-content: center;
+
+  @include mq(medium) {
+    justify-content: flex-start;
+    padding: $header-max-padding-top 83px;
+  }
+
+  .app-logo {
+    height: 39px;
+    
+    @include mq(medium) {
+      height: 45px
+    }
+  }
+
+}

@@ -1,0 +1,51 @@
+// ______________________________________________
+// Card component
+
+.card {
+  overflow: hidden;
+  box-shadow: 0 2px 20px 0 #6EB1FD;
+
+  @include mq(medium) {
+    border-radius: 26px;
+  }
+
+  @include mq(extraLarge) {
+    border-radius: 47px;
+  }
+}
+
+// ______________________________________________
+// Form to get contacted
+
+form.contact-me,
+form.contact-me > * {
+  border-radius: 1000px;
+}
+
+form.contact-me {
+  display: inline-grid;
+  grid-template-columns: 180px 100px;
+  box-shadow: 0 2px 20px 0 $color-3;
+
+  @include mq(small) {
+    grid-template-columns: 201.81px 114.55px;
+  }
+
+  @include mq(medium) {
+    grid-template-columns: 245.45px 143.64px;
+  }
+
+  @include mq(large) {
+    grid-template-columns: 276px 164px;
+  }
+
+  input {
+    grid-row: 1;
+    grid-column: 1 / 2;
+  }
+
+  button {
+    grid-row: 1;
+    grid-column: 1 / 3;
+  }
+}

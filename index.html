@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<!-- Created by Sacha B. (contact@scbj.io) -->
+  
+    <!-- Compatibility -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Informations -->
+    <title>TechOn.me</title>
+    <meta name="description" content="">
+
+    <!-- CSS Style -->
+    <link rel="stylesheet" href="./assets/styles/index.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,900|Quicksand:400,700&display=swap" rel="stylesheet">
+  </head>
+
+  <!-- The body is divided into three parts, the header, the main content and the footer -->
+  <body>
+    <header>
+      <img
+        class="app-logo"
+        src="/assets/images/logos/app.svg"
+        alt="App logo (TechOn.me)">
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Nous plaçons vos développeurs en intercontrat en 48h</h1>
+        <p>3000+ missions d’autres ESN vous attendent.<br>L’une d’elles correspond à votre intercontrat.</p>
+
+        <form
+          class="contact-me"
+          action="#"
+          onsubmit="event.preventDefault();return false">
+          <button type="submit">Contactez-moi</button>
+
+          <!-- The attributes "autocomplete" and "list" allow to disable the autofill that makes the design look broken in Internet Explorer and Edge (thanks Microsoft ... 🙄) -->
+          <input
+            type="email"
+            name="email"
+            placeholder="Mon adresse email …"
+            autocomplete="off"
+            list="autocompleteOff">
+        </form>
+      </section>
+
+      <section class="founded-by">
+        <h3>Fondée par deux anciens de
+          <img
+            class="comet-logo"
+            src="/assets/images/logos/comet.png"
+            alt="Comet logo">
+        </h3>
+        <p>L’alliance de l’expertise du matching et de l'expérience du business management d’ESN.</p>
+      </section>
+
+      <section class="description find-for-you">
+        <h2>Nous trouvons pour vous</h2>
+        <p>
+          <em>Ne cherchez plus.</em>
+          Nous vous faisons bénéficier de l'intelligence du réseau que nous avons construit entre les ESN de France.
+        </p>
+      </section>
+
+      <section class="description fast-proposals">
+        <h2>3 propositions en 48h</h2>
+        <p>
+          <em>Obtenez une réponse ultra-rapidement.</em>
+          Nous nous engageons à vous proposer sous 48h les 3 meilleures offres.
+        </p>
+      </section>
+
+      <section class="description matching-algorithm">
+        <h2>Grâce aux meilleurs algorithmes de matching</h2>
+        <p>
+          <em>Recevez enfin des offres pertinentes.</em>
+          Nous mettons à votre service notre expertise du matching à haute précision dans le recrutement de développeurs, déjà appliquée chez Comet. Nous l’allions à l’expérience de Senior Business Manager chez Akka Technologies et Amaris.
+        </p>
+      </section> 
+
+      <section class="description billing">
+        <h2>Avec uniquement une facturation à la réussite</h2>
+        <p>
+          <em>Bénéficiez de services adaptés à votre réussite. Rien de plus.</em> 
+          Nous vous offrons la solution et ne recevons notre commission 
+          qu’après le placement de votre intercontrat.
+        </p>
+      </section>
+
+      <section class="card get-started">
+        <h2>Vous avez un intercontrat ?</h2>
+        <form
+          class="contact-me"
+          action="#"
+          onsubmit="event.preventDefault();return false">
+          <button type="submit">Contactez-moi</button>
+          <input
+            type="email"
+            name="email"
+            placeholder="Mon adresse email …"
+            autocomplete="off"
+            list="autocompleteOff">
+        </form>
+      </section>
+
+      <section class="the-family">
+        <h3>Start-up accompagnée par</h3>
+        <img src="/assets/images/logos/the-family.png" alt="Comet logo">
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <a href="#">CGU</a>
+        <span>TechOn.Me © 2019 • Tous droits réservés</span>
+      </div>  
+    </footer>
+  </body>
+</html>

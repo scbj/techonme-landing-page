@@ -1,0 +1,313 @@
+$paddings: (
+  default: 0 19px,
+  small: 0 60.14px,
+  medium: 0 142.41px,
+  large: 0 200px
+);
+
+main {
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+
+  margin-right: auto;
+  margin-left:  auto;
+  @include responsive (padding, $paddings);
+
+  max-width: $content-width;
+}
+
+section.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  h1 {
+    $widths: (
+      default: 7.8em,
+      small: 8.7em,
+      medium: 11em,
+      large: 12em,
+      extraLarge: 17em
+    );
+    @include responsive (width, $widths);
+
+    margin-bottom: 41px;
+    position: relative;
+  
+    &::after {
+      @include title-underline;
+      bottom: -25px;
+      left: -4px;
+    }
+  }
+
+  p {
+    $widths: (
+      default: 290px,
+      small: 342px,
+      medium: 454px,
+      large: 530px
+    );
+    @include responsive (width, $widths);
+  }
+
+  .contact-me {
+    align-self: center;
+    margin-top: 60px;
+
+    @include mq(small) {
+      align-self: flex-start;
+    }
+  }
+}
+
+section.find-for-you { margin-top: 194px; }
+section.fast-proposals { margin-top: 486px; }
+section.matching-algorithm { margin-top: 506px; }
+section.billing { margin-top: 406px; }
+
+section.founded-by {
+  $widths: (
+    default: 280px,
+    small : 342px,
+    medium: 454px,
+    large : 530px,
+    extraLarge : 618px
+  );
+  @include responsive(width, $widths);
+}
+
+section.description {
+  $widths: (
+    default: 280px,
+    small : 342px,
+    medium: 454px,
+    large : 530px,
+    extraLarge : 618px
+  );
+  @include responsive(width, $widths);
+  
+  @include mq(large) {
+    margin-top: 340px;
+    &.find-for-you { margin-top: 194px; }
+  }
+
+  @include mq(extraLarge) {
+    margin-top: 280px;
+    &.find-for-you { margin-top: 280px; }
+  }
+
+  // Align right one element out of two
+  &:nth-child(odd) {
+    align-self: flex-end;
+    text-align: right;
+
+    // Reposition the underline
+    h2::after {
+      left: auto;
+      right: -4px;
+    }
+  }
+
+  em {
+    display: block; 
+  }
+
+  h2 {
+    margin-bottom: 41px;
+    position: relative;
+  
+    &::after {
+      @include title-underline;
+      bottom: -15px;
+      left: -4px;
+    }
+  }
+}
+
+.founded-by {
+  $margins: (
+    default: 458px,
+    small : 393.09px,
+    medium: 300.36px,
+    large : 264px
+  );
+  
+  color: $text-color-2;
+  @include responsive(margin-top, $margins);
+  max-width: 480px;
+  text-align: center;
+  align-self: center;
+  position: relative;
+
+  &::before,
+  &::after {
+    @include title-underline($width: 60px);
+    left: 50%;
+    width: 60px;
+    transform: translateX(-50%);
+  }
+
+  &::before {
+    top: -44px;
+
+    @include mq (large) {
+      top: -10px;
+    }
+  }
+  &::after { bottom: -45px; }
+
+  .comet-logo,
+  h3 {
+    display: block;
+    
+    @include mq (large) {
+      display: inline-block;
+    }
+  }
+
+  h3 {
+    margin-bottom: 0.5em;
+  }
+
+  .comet-logo {
+    margin: auto;
+    height: 47px;
+    
+    @include mq(large) {
+      height: 52px;
+
+      // Center vertically with the text that precedes the comet logo
+      transform: translateY(30%);
+    }
+  }
+}
+
+.get-started {
+  background: linear-gradient(174.35deg, $color-2 0%, $color-4 100%);
+  align-self: center;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  margin-top: 200px;
+  height: 498px;
+  width: 100vw;
+  position: relative;
+
+  @include mq(medium) {
+    background: linear-gradient(142.8deg, $color-2 0%, $color-4 100%);
+    justify-content: center;
+
+    height: 334px;
+    width: 680px;
+  }
+
+  @include mq (large) {
+    width: 860px;
+  }
+
+  @include mq (extraLarge) {
+    width: 979px;
+  }
+
+  &::before {
+    content: '';
+    background: linear-gradient(142.8deg, $color-2 0%, $color-4 100%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  h2 {
+    color: white;
+    text-align: center;
+    margin-top: 78px;
+    margin-bottom: 36px;
+
+    @include mq (medium) {
+      margin-top: 0;
+    }
+  }
+
+  .contact-me {
+    box-shadow: 0 5px 20px 0 rgba(72,166,235,0.75);
+
+    input {
+      box-shadow: 0 10px 15px 0 rgba(72,166,235,0.6);
+    }
+  }
+}
+
+.get-started {
+  $images: (
+    default: (
+      url(/assets/images/shapes/plane-mobile.svg),
+      url(/assets/images/shapes/mail-1-mobile.svg),
+      url(/assets/images/shapes/mail-2-mobile.svg),
+      url(/assets/images/shapes/mail-3-mobile.svg),
+      url(/assets/images/shapes/mail-4-mobile.svg)),
+    large: (
+      url(/assets/images/shapes/plane.svg),
+      url(/assets/images/shapes/mail-1.svg),
+      url(/assets/images/shapes/mail-2.svg),
+      url(/assets/images/shapes/mail-3.svg),
+      url(/assets/images/shapes/mail-4.svg),
+      url(/assets/images/shapes/mail-5.svg)),
+  );
+  $positions: (
+    default: (
+      top 300px left -6px,
+      top 145px left 30px,
+      top 258px right 40px,
+      top 48px right 26px,
+      top 24px left 16px
+    ),
+    medium: (
+      top 134px right 40px,
+      top 195px left 80px,
+      top 258px right 180px,
+      top 58px right 56px,
+      top 34px left 26px
+    ),
+    large: (
+      top 93px right 40px,
+      top 195px left 146px,
+      top 268px right 240px,
+      top 38px right 136px,
+      top 114px left 46px,
+      top 22px left 176px
+    ),
+    extraLarge: (
+      top 93px right 40px,
+      top 198px left 196px,
+      top 268px right 300px,
+      top 38px right 196px,
+      top 108px left 76px,
+      top 22px left 236px
+    )
+  );
+
+  background-repeat: no-repeat;
+  @include responsive (background-image, $images);
+  @include responsive (background-position, $positions);
+}
+
+.the-family {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 118px;
+
+  h3 {
+    color: #505050;
+    margin-bottom: 24px;
+  }
+}
