@@ -23,7 +23,8 @@ section.hero {
       small: 8.7em,
       medium: 11em,
       large: 12em,
-      extraLarge: 17em
+      extraLarge: 15em,
+      desktop: 17em
     );
     @include responsive (width, $widths);
 
