@@ -8,8 +8,8 @@ footer {
   background-repeat: no-repeat;  
   
   margin-top: 78px;
-  padding-right: $content-min-padding;
-  padding-left:  $content-min-padding;
+  @include responsive (padding-right, $content-paddings);
+  @include responsive (padding-left, $content-paddings);
   padding-bottom: 44px;
 
   display: flex;
@@ -20,8 +20,6 @@ footer {
 
   @include mq (medium) {
     font-size: 18px;
-    padding-right: $content-max-padding;
-    padding-left:  $content-max-padding;
   }
 }
 

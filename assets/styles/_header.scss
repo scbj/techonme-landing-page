@@ -1,5 +1,7 @@
 header {
-  padding: $header-min-padding-top $content-min-padding;
+  $min-padding: map-get($content-paddings, default);
+
+  padding: $header-min-padding-top  $min-padding;
   padding-bottom: calc(#{$header-min-padding-top} + 20px);
 
   display: flex;

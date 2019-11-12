@@ -1,9 +1,3 @@
-$paddings: (
-  default: 0 19px,
-  small: 0 60.14px,
-  medium: 0 142.41px,
-  large: 0 200px
-);
 
 main {
   overflow-x: hidden;
@@ -12,7 +6,8 @@ main {
 
   margin-right: auto;
   margin-left:  auto;
-  @include responsive (padding, $paddings);
+  @include responsive (padding-right, $content-paddings);
+  @include responsive (padding-left, $content-paddings);
 
   max-width: $content-width;
 }

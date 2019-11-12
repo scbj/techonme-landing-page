@@ -327,25 +327,44 @@ main {
           flex-direction: column;
   margin-right: auto;
   margin-left: auto;
-  padding: 0 19px;
+  padding-right: 19px;
+  padding-left: 19px;
   max-width: 1440px;
 }
 
 @media screen and (min-width: 480px) {
   main {
-    padding: 0 60.14px;
+    padding-right: 60.14px;
   }
 }
 
 @media screen and (min-width: 800px) {
   main {
-    padding: 0 142.41px;
+    padding-right: 142.41px;
   }
 }
 
 @media screen and (min-width: 1024px) {
   main {
-    padding: 0 200px;
+    padding-right: 200px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  main {
+    padding-left: 60.14px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  main {
+    padding-left: 142.41px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    padding-left: 200px;
   }
 }
 
@@ -799,11 +818,45 @@ footer {
   position: relative;
 }
 
+@media screen and (min-width: 480px) {
+  footer {
+    padding-right: 60.14px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  footer {
+    padding-right: 142.41px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  footer {
+    padding-right: 200px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  footer {
+    padding-left: 60.14px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  footer {
+    padding-left: 142.41px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  footer {
+    padding-left: 200px;
+  }
+}
+
 @media screen and (min-width: 800px) {
   footer {
     font-size: 18px;
-    padding-right: 200px;
-    padding-left: 200px;
   }
 }
 

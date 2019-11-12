@@ -14,8 +14,13 @@ $text-color-2: #505050;
 // Whitespaces
 
 $content-width: 1440px;
-$content-max-padding: 200px;
-$content-min-padding: 19px;
+
+$content-paddings: (
+  default: 19px,
+  small: 60.14px,
+  medium: 142.41px,
+  large: 200px
+);
 
 $header-max-padding-top: 70px;
 $header-min-padding-top: 36px;
