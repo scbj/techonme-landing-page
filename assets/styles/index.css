@@ -405,7 +405,7 @@ section.hero h1 {
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1200px) {
   section.hero h1 {
     width: 17em;
   }
@@ -496,7 +496,7 @@ section.founded-by {
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1200px) {
   section.founded-by {
     width: 618px;
   }
@@ -524,6 +524,12 @@ section.description {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  section.description {
+    width: 618px;
+  }
+}
+
 @media screen and (min-width: 1440px) {
   section.description {
     width: 618px;
@@ -539,7 +545,7 @@ section.description {
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1200px) {
   section.description {
     margin-top: 280px;
   }
@@ -704,7 +710,7 @@ section.description h2::after {
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1200px) {
   .get-started {
     width: 979px;
   }
@@ -768,7 +774,7 @@ section.description h2::after {
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1200px) {
   .get-started {
     background-position: top 93px right 40px, top 198px left 196px, top 268px right 300px, top 38px right 196px, top 108px left 76px, top 22px left 236px;
   }
@@ -906,7 +912,7 @@ footer > .container a {
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1200px) {
   .card {
     border-radius: 47px;
   }
@@ -1031,6 +1037,13 @@ body {
   body {
     background-image: url(/assets/images/illustrations/header-mobile.svg), url(/assets/images/illustrations/find-for-you.svg), url(/assets/images/illustrations/fast-proposals-mobile.svg), url(/assets/images/illustrations/matching-algorithm.svg);
     background-position: top 245px right -561px, top 1129px right -152px, top 1506px left -526px, top 2552px right -191px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    background-image: url(/assets/images/illustrations/header.svg), url(/assets/images/illustrations/find-for-you.svg), url(/assets/images/illustrations/fast-proposals.svg), url(/assets/images/illustrations/matching-algorithm.svg);
+    background-position: top 0 right -185px, top 1155px right -115px, top 1046px left -720px, top 2406px right -191px;
   }
 }
 
