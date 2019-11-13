@@ -237,6 +237,7 @@ button {
 
 input {
   -webkit-appearance: none;
+  background: white;
   border: 1px solid transparent;
   padding: 0 34.9px;
   height: 49px;
@@ -673,20 +674,8 @@ section.description h2::after {
 .get-started {
   background: linear-gradient(174.35deg, #2584FF 0%, #B2DBFB 100%);
   -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
       align-self: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
   margin-top: 200px;
   height: 498px;
   width: 100vw;
@@ -716,15 +705,30 @@ section.description h2::after {
   }
 }
 
-.get-started::before {
-  content: '';
-  background: linear-gradient(142.8deg, #2584FF 0%, #B2DBFB 100%);
+.get-started .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   width: 100%;
   height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
+}
+
+@media screen and (min-width: 800px) {
+  .get-started .container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .get-started h2 {
@@ -750,32 +754,32 @@ section.description h2::after {
           box-shadow: 0 10px 15px 0 rgba(72, 166, 235, 0.6);
 }
 
-.get-started {
+.get-started > .container {
   background-repeat: no-repeat;
   background-image: url(/assets/images/shapes/plane-mobile.svg), url(/assets/images/shapes/mail-1-mobile.svg), url(/assets/images/shapes/mail-2-mobile.svg), url(/assets/images/shapes/mail-3-mobile.svg), url(/assets/images/shapes/mail-4-mobile.svg);
   background-position: top 300px left -6px, top 145px left 30px, top 258px right 40px, top 48px right 26px, top 24px left 16px;
 }
 
 @media screen and (min-width: 1024px) {
-  .get-started {
+  .get-started > .container {
     background-image: url(/assets/images/shapes/plane.svg), url(/assets/images/shapes/mail-1.svg), url(/assets/images/shapes/mail-2.svg), url(/assets/images/shapes/mail-3.svg), url(/assets/images/shapes/mail-4.svg), url(/assets/images/shapes/mail-5.svg);
   }
 }
 
 @media screen and (min-width: 800px) {
-  .get-started {
+  .get-started > .container {
     background-position: top 134px right 40px, top 195px left 80px, top 258px right 180px, top 58px right 56px, top 34px left 26px;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .get-started {
+  .get-started > .container {
     background-position: top 93px right 40px, top 195px left 146px, top 268px right 240px, top 38px right 136px, top 114px left 46px, top 22px left 176px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .get-started {
+  .get-started > .container {
     background-position: top 93px right 40px, top 198px left 196px, top 268px right 300px, top 38px right 196px, top 108px left 76px, top 22px left 236px;
   }
 }

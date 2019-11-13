@@ -182,18 +182,14 @@ section.description {
 
 .get-started {
   background: linear-gradient(174.35deg, $color-2 0%, $color-4 100%);
+
   align-self: center;
   
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-
   margin-top: 200px;
   height: 498px;
   width: 100vw;
   position: relative;
-
+  
   @include mq(medium) {
     background: linear-gradient(142.8deg, $color-2 0%, $color-4 100%);
     justify-content: center;
@@ -210,38 +206,41 @@ section.description {
     width: 979px;
   }
 
-  &::before {
-    content: '';
-    background: linear-gradient(142.8deg, $color-2 0%, $color-4 100%);
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     width: 100%;
     height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
   
+    @include mq(medium) {
+      justify-content: center;
+    }
+  }
+
   h2 {
     color: white;
     text-align: center;
     margin-top: 78px;
     margin-bottom: 36px;
-
+  
     @include mq (medium) {
       margin-top: 0;
     }
   }
-
+  
   .contact-me {
     box-shadow: 0 5px 20px 0 rgba(72,166,235,0.75);
-
+  
     input {
       box-shadow: 0 10px 15px 0 rgba(72,166,235,0.6);
     }
   }
 }
 
-.get-started {
+// Card illustrations (shapes)
+.get-started > .container {
   $images: (
     default: (
       url(/assets/images/shapes/plane-mobile.svg),
